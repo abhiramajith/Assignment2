@@ -915,39 +915,48 @@ void outFile(int winCheck, int score0, int score1){
     FILE *cfPtr; // othello-results.txt file pointer
 
     if ((cfPtr = fopen("othello-results.txt", "ab+")) == NULL){// fopen opens file; exits if can't be opened
-        //ab+ opens a binary file in append mode
+
+        //ab+ opens a binary file in append mode, results will be continually added to same file
         printf("Could not open file.\n");
 
     }
 
     else{
 
-        if (winCheck == 0) {
-            char dateTime[30];
-            struct tm tim;
-            time_t now;
-            now = time(NULL);
-            tim = *(localtime(&now));
-            strftime(dateTime, 30, "%b %d, %Y; %H:%M\n", &tim);
-            fprintf(cfPtr, "%s", dateTime);
+        if (winCheck == 0) { //Function is called at start of program with winCheck 0 so date and time of start of game is written to file
+
+            //Writing date and time at start of game to file using time.h library functions
+            char dateTime[30]; //Holds date and time
+            struct tm Time;
+            time_t currentTime;
+            currentTime = time(NULL);
+            Time = *(localtime(&currentTime));
+            strftime(dateTime, 30, "%b %d, %Y; %H:%M\n", &Time); //strftime formats time as string
+            fprintf(cfPtr, "%s", dateTime); //Printing date & time to file
         }
 
-        if (winCheck == 1){
+        if (winCheck == 1){ //winCheck of 1 means black has won
+
+            //Writing game result to file
             fprintf(cfPtr,  "|Final score: %s - %d : %s - %d|\n", player1, score0, player2, score1);
             fprintf(cfPtr, "%s won the game.\n\n", player1);
         }
 
-        else if(winCheck == 2){
+        else if(winCheck == 2){ //winCheck of 2 means white has won
+
+            //Writing game result to file
             fprintf(cfPtr,  "|Final score: %s - %d : %s - %d|\n", player2, score1, player1, score0);
             fprintf(cfPtr, "%s won the game.\n\n", player2);
         }
 
-        else if (winCheck == 3){
+        else if (winCheck == 3){ //winCheck of 3 means draw
+
+            //Writing game result to file
             fprintf(cfPtr,  "|Final score: %s - %d : %s - %d|\n", player1, score0, player2, score1);
             fprintf(cfPtr, "The game ended as a draw.\n\n");
         }
 
-        fclose(cfPtr);
+        fclose(cfPtr); //Closing file
 
     }
 }
