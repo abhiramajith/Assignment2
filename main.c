@@ -537,7 +537,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
                 isSandwich = true;
 
-                goto flip2; //goto line 507
+                goto flip2; //goto line 507 so pieces can be flipped to player's colours
 
             }
         }
@@ -585,104 +585,133 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
     }
 
+    //An e of 0 and f of -1 means you should search in a straight line right of the current move
     else if (e == 0 && f == -1){
+
         flip4:
-        for (int i = d; i <= 7; i++){
+
+        for (int i = d; i <= 7; i++){ //for loop starting at column of opponent piece and moves right of the board with each iteration
 
             if (isSandwich && check == 0){
+
                 if (board.board[c][i] == playerColour){
-                    return 1;
+
+                    return 1; //sandwich found
                 }
                 board.board[c][i] = playerColour;
             }
 
             if(isSandwich && check == 1){
                 if (board.board[c][i] == playerColour){
-                    return 1;
+
+                    return 1; //sandwich found
                 }
             }
 
             if (board.board[c][i] == board.symbol){
-                return -1;
+
+                return -1; //No sandwich is found
             }
 
 
             if (board.board[c][i] == playerColour && !isSandwich){
+
                 isSandwich = true;
-                goto flip4;
+                goto flip4; //goto line 591
             }
         }
-        return -1;
+
+        return -1; //No sandwich is found
     }
 
+    //An e of 1 and f of 1 means you should search in a straight line to the top left diagonal of the current move
     else if (e == 1 && f == 1){
 
+        //When searching diagonally both row and column positions change as you move so both must be iterated
         int i, j;
+
         flip5:
         i = c;
         j = d;
-        while (i >= 0 && j >= 0){
+
+        while (i >= 0 && j >= 0){ //As your moving on top left diagonal you get closer to 0 each time
 
             if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
-                    return 1;
+
+                    return 1; //sandwich found
                 }
+
                 board.board[i][j] = playerColour;
             }
 
             if(isSandwich && check == 1){
+
                 if (board.board[i][j] == playerColour){
-                    return 1;
+
+                    return 1; //sandwich found
                 }
             }
 
+            //Decrementing i and j to move to next position on diagonal
             --i;
             --j;
 
             if (board.board[i][j] == board.symbol){
-                return -1;
+
+                return -1; //No sandwich is found
             }
 
             if (board.board[i][j] == playerColour && !isSandwich){
+
                 isSandwich = true;
-                goto flip5;
+                goto flip5; //goto line 633
             }
         }
-        return -1;
+
+        return -1; //No sandwich is found
     }
 
+    //An e of 1 and f of -1 means you should search in a straight line to the top right diagonal of the current move
     else if (e == 1 && f == -1){
 
         int i, j;
+
         flip6:
         i = c;
         j = d;
-        while (i >= 0 && j < 8){
+        while (i >= 0 && j < 8){ //As your moving on top right diagonal you get closer to 0 each time on rows and to 7 on columns
 
             if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
+
                     return 1;
                 }
+
                 board.board[i][j] = playerColour;
             }
 
             if(isSandwich && check == 1){
                 if (board.board[i][j] == playerColour){
+
                     return 1;
                 }
             }
 
+            //Decrementing i and incrementing j allows you to move along the diagonal to the top right
             --i;
             ++j;
 
             if (board.board[i][j] == board.symbol){
+
                 return -1;
             }
 
 
             if (board.board[i][j] == playerColour && !isSandwich){
+
                 isSandwich = true;
-                goto flip6;
+                goto flip6; //goto line 680
             }
         }
 
@@ -690,37 +719,46 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
     }
 
+    //An e of -1 and f of 1 means you should search in a straight line to the bottom left diagonal of the current move
     else if (e == -1 && f == 1){
+
         int i, j;
+
         flip7:
         i = c;
         j = d;
-        while (i < 8 && j > 0){
+
+        while (i < 8 && j > 0){ //As your moving on bottom left diagonal you get closer to 7 each time on rows and to 0 on columns
 
             if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
+
                     return 1;
                 }
+
                 board.board[i][j] = playerColour;
             }
 
             if(isSandwich && check == 1){
                 if (board.board[i][j] == playerColour){
+
                     return 1;
                 }
             }
 
+            //Incrementing i and decrementing j allows you to move along the diagonal to the bottom left
             ++i;
             --j;
 
             if (board.board[i][j] == board.symbol){
+
                 return -1;
             }
 
-
             if (board.board[i][j] == playerColour && !isSandwich){
+
                 isSandwich = true;
-                goto flip7;
+                goto flip7; //goto line 727
             }
         }
 
@@ -728,35 +766,46 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
     }
 
+    //An e of -1 and f of -1 means you should search in a straight line to the bottom right diagonal of the current move
     else if (e == -1 && f == -1){
+
         int i, j;
+
         flip8:
         i = c;
         j = d;
-        while (i < 8 && j < 8){
+
+        while (i < 8 && j < 8){ //As your moving on bottom right diagonal you get closer to 7 each time
 
             if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
+
                     return 1;
                 }
+
                 board.board[i][j] = playerColour;
             }
 
             if(isSandwich && check == 1){
+
                 if (board.board[i][j] == playerColour){
+
                     return 1;
                 }
             }
 
+            //Incrementing i and j allows you to move along the diagonal to the bottom right
             ++i;
             ++j;
 
             if (board.board[i][j] == board.symbol){
+
                 return -1;
             }
 
 
             if (board.board[i][j] == playerColour && !isSandwich){
+
                 isSandwich = true;
                 goto flip8;
             }
@@ -813,6 +862,7 @@ int anyMove(unsigned char colour){
 }
 
 void gameOver(){
+
     int wincheck = 0;
 
     if (count(colours[0], board) > count(colours[1], board)){
