@@ -43,7 +43,7 @@ int gameWon = 0; //signifies if the game has been won
 char player1[20], player2[20]; //holds name of player1 and 2
 bool bValidmove = true; //holds whether there exists valid move for black
 bool wValidmove = true; //holds whether there exists valid move for white
-char colours[2] = {'B', 'W'};
+char colours[2] = {'B', 'W'}; //Holds game pieces/player colours
 
 int main() {
     int wincheck = 0;
@@ -57,7 +57,7 @@ int main() {
 
     printBoard(board); //Print initial board to users
 
-    outFile(wincheck, count(colours[0], board), count(colours[1], board)); //Print current date and time to outfile
+    outFile(wincheck, count(colours[0], board), count(colours[1], board)); //Print current date and time of game start to outfile
 
     while (gameWon != 1){ //While game not won
 
@@ -73,8 +73,6 @@ int main() {
 
 
     }
-
-
 }
 
 //When this function is called players assigned to respective colours
@@ -112,6 +110,7 @@ int initializeBoard()
         for (col = 0; col < board.col; col++)// For loop for board columns
         {
             board.board[row][col] = board.symbol; //Filling all empty spaces with board symbol '.'
+
             //Setting up initial othello square in middle of board
             board.board[3][3] = colours[1];
             board.board[3][4] = colours[0];
@@ -136,7 +135,7 @@ int playerMove(unsigned char colour){
     //Label for when a new move must be chosen
     newMove:
 
-    if (anyMove(colour) == 0){ //Call to anyMove to see if there is a move available for players colour
+    if (anyMove(colour) == 0){ //Call to anyMove to see if there is a move available for players colour (returns 0 if no move)
 
         printf("\nYou have no valid moves! Enter p to pass\n");
         moveExists = false; //Set to false as there is no move to make
@@ -819,31 +818,43 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
 }
 
+/* This function takes in a colour on the board and checks the every board position for valid moves for that colour
+ * returns 1 if there is a valid move on the board
+ * returns 0 if there is not */
+
 int anyMove(unsigned char colour){
 
+    //x represents column position
     int x = 0;
+
+    //This while and for loop combination allows every position on the board to be checked by checking every row for
+    //a particular column before it is iterated
 
     while (x <= 7){
 
-        for (int i = 0; i <= 7; ++i) {
-            if(validMove(i ,x, colour, 1) == 0){
+        for (int i = 0; i <= 7; ++i) { //Every row position is checked with the current column
 
-                if(colour == colours[0]){
+            if(validMove(i ,x, colour, 1) == 0){ //If validMove returns 0 there is a valid move on the board for the colour specified
+
+                if(colour == colours[0]){ //If colour is B set global variable bValidmove to true
+
                     bValidmove = true;
                 }
 
-                else if(colour == colours[1]) {
+                else if(colour == colours[1]) { //If colour is W set global variable bwValidmove to true
                     wValidmove = true;
                 }
 
-                return 1;
+                return 1; //Signifies that there is a valid move
             }
 
         }
 
-        x++;
+        x++; //increment to next column
 
     }
+
+    //if no valid move is found set appropriate variable to false
 
     if(colour == colours[0]){
         bValidmove = false;
@@ -853,42 +864,52 @@ int anyMove(unsigned char colour){
         wValidmove = false;
     }
 
-    if (!bValidmove && !wValidmove){
-        gameWon = 1;
-        gameOver();
+    if (!bValidmove && !wValidmove) { //If both boolean variables are false the game should end as there are no moves left
+
+        gameWon = 1; //causes while loop in main to stop
+        gameOver(); //call to gameOver to display results of game
     }
 
-    return 0;
+    return 0; //Signifies there is no valid move on the board for inputted colour
 }
+
+/* This function is called when the game has ended so the results of the game
+ * can be displayed such as the winner and the final score*/
 
 void gameOver(){
 
-    int wincheck = 0;
+    //This variable allows for differentiation of who wins the game
+    //wincheck of 1 means Black won, 2 means white won , 3 means it was a draw
+    int wincheck;
 
-    if (count(colours[0], board) > count(colours[1], board)){
+    if (count(colours[0], board) > count(colours[1], board)){ //if there is more black pieces(colours[0]) than white (colours[1]) then black has won the game
 
-        printf("\n%s wins the game! Final Score: %s (B) - %d |  %s (W) - %d \n", player1, player1, count(colours[0], board), player2, count(colours[1], board));
+        printf("\n%s wins the game! Final Score: %s (B) - %d |  %s (W) - %d \n", player1, player1, count(colours[0], board), player2, count(colours[1], board)); //Print game results
         wincheck = 1;
     }
 
-    else if (count(colours[1], board) > count(colours[0], board)){
+    else if (count(colours[1], board) > count(colours[0], board)){ //if more white pieces than black
+
         printf("\n%s wins the game! Final Score: %s (W) - %d |  %s (B) - %d \n", player2, player2, count(colours[1], board), player1, count(colours[0], board));
         wincheck = 2;
     }
 
-    else{
+    else{ //else it is a draw
+
         printf("\nIts a draw! Final Score: %s (B) - %d |  %s (W) - %d \n", player1, count(colours[0], board), player2, count(colours[1], board));
         wincheck = 3;
     }
 
-    printBoard(board);
+    printBoard(board); //print the final board
 
-    outFile(wincheck, count(colours[0], board), count(colours[1], board));
+    outFile(wincheck, count(colours[0], board), count(colours[1], board)); //Call to outFile to write results of game to text file
 
-    exit(0);
+    exit(0); //end program
 
 }
 
+/* This function writes the date and time of when the game started and the final result of the game
+ * to a text file called othello-results.txt*/
 void outFile(int winCheck, int score0, int score1){
 
     FILE *cfPtr; // othello-results.txt file pointer
