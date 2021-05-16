@@ -32,7 +32,7 @@ int playerMove(unsigned char colour);
 int count(char colour, Game_Board Board);
 int validMove (int a, int b, unsigned char colour, int check);
 int legalMove(int a, int b, unsigned char colour, int check);
-int isBetween(int a, int b, int c, int d, unsigned char colour, int check);
+int isSandwich(int a, int b, int c, int d, unsigned char colour, int check);
 int anyMove(unsigned char colour);
 void gameOver(void);
 void outFile(int winCheck, int score0, int score1);
@@ -310,10 +310,10 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[upx][b] == oppColour && !topPerim){ //if piece above is of opposite colour and current move is not on top perimeter
 
-        /*isBetween takes in the current move (a, b) and the co-ordinate of an opponent piece and checks if there is a piece of the player's
+        /*isSandwich takes in the current move (a, b) and the co-ordinate of an opponent piece and checks if there is a piece of the player's
          * colour anywhere in the same line*/
 
-        if (isBetween(a, b, upx, b, playerColour,check) == -1){ //If call to isBetween returns -1
+        if (isSandwich(a, b, upx, b, playerColour,check) == -1){ //If call to isSandwich returns -1
             isBet = false; //not between any piece above
         }
 
@@ -326,7 +326,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[upx][leftY] == oppColour && !leftPerim && !topPerim){ //if piece on top left diagonal is of opposite colour and current move is not on left perimeter or top perimeter
 
-        if (isBetween(a, b, upx, leftY, playerColour,check) == -1){
+        if (isSandwich(a, b, upx, leftY, playerColour,check) == -1){
             isBet = false;
         }
 
@@ -339,7 +339,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[upx][rightY] == oppColour && !topPerim && !rightPerim){ //if piece on top right diagonal is of the opposite colour and current move is not on top perimeter or right perimeter
 
-        if (isBetween(a, b, upx, rightY, playerColour,check) == -1){
+        if (isSandwich(a, b, upx, rightY, playerColour,check) == -1){
             isBet = false;
         }
 
@@ -352,7 +352,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[botx][b] == oppColour && !botPerim){ //if piece on bottom is of the opposite colour and current move is not on bottom perimeter
 
-        if (isBetween(a, b, botx, b, playerColour,check) == -1){
+        if (isSandwich(a, b, botx, b, playerColour,check) == -1){
             isBet = false;
         }
 
@@ -365,7 +365,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[botx][leftY] == oppColour && !leftPerim && !botPerim){ //if piece on bottom left diagonal is of opposite colour and current move is not on left perimeter or bottom perimeter
 
-        if (isBetween(a, b, botx,leftY, playerColour,check) == -1){
+        if (isSandwich(a, b, botx,leftY, playerColour,check) == -1){
             isBet = false;
         }
 
@@ -378,7 +378,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[botx][rightY] == oppColour && !rightPerim && !botPerim){ //if piece on bottom right diagonal is of opposite colour and current move is not on right perimeter or bottom perimeter
 
-        if (isBetween(a, b, botx, rightY, playerColour,check) == -1){
+        if (isSandwich(a, b, botx, rightY, playerColour,check) == -1){
             isBet = false;
         }
 
@@ -392,7 +392,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[a][leftY] == oppColour && !leftPerim){ //if piece on left is of opposite colour and current move is not on left perimeter
 
-        if (isBetween(a, b, a, leftY, playerColour,check) == -1){
+        if (isSandwich(a, b, a, leftY, playerColour,check) == -1){
             isBet = false;
         }
 
@@ -405,7 +405,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     if (board.board[a][rightY] == oppColour && !rightPerim){ //if piece on right is of opposite colour and current move is not on right perimeter
 
-        if ( isBetween(a, b, a, rightY, playerColour,check) == -1){
+        if ( isSandwich(a, b, a, rightY, playerColour,check) == -1){
             isBet = false;
         }
 
@@ -427,9 +427,18 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
 }
 
-int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
+/*This function checks locations around the current move where there are adjacent opponent pieces for pieces of the player's colour that
+ * sandwich the opponent pieces. If a suitable piece is found all opponent pieces are turned into pieces of the player's colour.
+ * The function takes in the current move (a,b) and the location of an adjacent opponent piece (c,d).
+ * Using these two points you can calculate which direction to check for a sandwiching player piece by getting the difference between the
+ * two points.
+ * The players colour is also passed in to differentiate player and opp colours.
+ * a check number is passed in, this is for differentiating between calls to the function where the board is
+ * changed and calls where the board is not altered.*/
 
-    bool isBetween = false;
+int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
+
+    bool isSandwich = false; //Truth value for whether there is a player piece 
     unsigned char playerColour;
     int e = a - c;
     int f = b - d;
@@ -447,14 +456,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         flip:
         for (int i = c; i >= 0; i--){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[i][d] == playerColour){
                     return 1;
                 }
                 board.board[i][d] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[i][d] == playerColour){
                     return 1;
                 }
@@ -465,8 +474,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
             }
 
 
-            if (board.board[i][d] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[i][d] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip;
 
             }
@@ -480,14 +489,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         flip2:
         for (int i = c; i <= 7; i++){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[i][d] == playerColour){
                     return 1;
                 }
                 board.board[i][d] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[i][d] == playerColour){
                     return 1;
                 }
@@ -498,8 +507,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
             }
 
 
-            if (board.board[i][d] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[i][d] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip2;
             }
         }
@@ -510,14 +519,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         flip3:
         for (int j = d; j >= 0; j--){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[c][j] == playerColour){
                     return 1;
                 }
                 board.board[c][j] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[c][j] == playerColour){
                     return 1;
                 }
@@ -527,8 +536,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
                 return -1;
             }
 
-            if (board.board[c][j] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[c][j] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip3;
             }
         }
@@ -540,14 +549,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         flip4:
         for (int i = d; i <= 7; i++){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[c][i] == playerColour){
                     return 1;
                 }
                 board.board[c][i] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[c][i] == playerColour){
                     return 1;
                 }
@@ -558,8 +567,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
             }
 
 
-            if (board.board[c][i] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[c][i] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip4;
             }
         }
@@ -574,14 +583,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         j = d;
         while (i >= 0 && j >= 0){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
                 board.board[i][j] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
@@ -594,8 +603,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
                 return -1;
             }
 
-            if (board.board[i][j] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[i][j] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip5;
             }
         }
@@ -610,14 +619,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         j = d;
         while (i >= 0 && j < 8){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
                 board.board[i][j] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
@@ -631,8 +640,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
             }
 
 
-            if (board.board[i][j] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[i][j] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip6;
             }
         }
@@ -648,14 +657,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         j = d;
         while (i < 8 && j > 0){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
                 board.board[i][j] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
@@ -669,8 +678,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
             }
 
 
-            if (board.board[i][j] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[i][j] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip7;
             }
         }
@@ -686,14 +695,14 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
         j = d;
         while (i < 8 && j < 8){
 
-            if (isBetween && check == 0){
+            if (isSandwich && check == 0){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
                 board.board[i][j] = playerColour;
             }
 
-            if(isBetween && check == 1){
+            if(isSandwich && check == 1){
                 if (board.board[i][j] == playerColour){
                     return 1;
                 }
@@ -707,8 +716,8 @@ int isBetween(int a, int b, int c, int d, unsigned char colour, int check){
             }
 
 
-            if (board.board[i][j] == playerColour && !isBetween){
-                isBetween = true;
+            if (board.board[i][j] == playerColour && !isSandwich){
+                isSandwich = true;
                 goto flip8;
             }
         }
