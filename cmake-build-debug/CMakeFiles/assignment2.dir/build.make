@@ -128,12 +128,68 @@ CMakeFiles/assignment2.dir/gameInfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/gameInfo.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\gameInfo.c -o CMakeFiles\assignment2.dir\gameInfo.c.s
 
+CMakeFiles/assignment2.dir/validMoveFinder.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/validMoveFinder.c.obj: ../validMoveFinder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/assignment2.dir/validMoveFinder.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\validMoveFinder.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\validMoveFinder.c
+
+CMakeFiles/assignment2.dir/validMoveFinder.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/validMoveFinder.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\validMoveFinder.c > CMakeFiles\assignment2.dir\validMoveFinder.c.i
+
+CMakeFiles/assignment2.dir/validMoveFinder.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/validMoveFinder.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\validMoveFinder.c -o CMakeFiles\assignment2.dir\validMoveFinder.c.s
+
+CMakeFiles/assignment2.dir/isSandwich.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/isSandwich.c.obj: ../isSandwich.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/assignment2.dir/isSandwich.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\isSandwich.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\isSandwich.c
+
+CMakeFiles/assignment2.dir/isSandwich.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/isSandwich.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\isSandwich.c > CMakeFiles\assignment2.dir\isSandwich.c.i
+
+CMakeFiles/assignment2.dir/isSandwich.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/isSandwich.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\isSandwich.c -o CMakeFiles\assignment2.dir\isSandwich.c.s
+
+CMakeFiles/assignment2.dir/anyMove.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/anyMove.c.obj: ../anyMove.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/assignment2.dir/anyMove.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\anyMove.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\anyMove.c
+
+CMakeFiles/assignment2.dir/anyMove.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/anyMove.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\anyMove.c > CMakeFiles\assignment2.dir\anyMove.c.i
+
+CMakeFiles/assignment2.dir/anyMove.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/anyMove.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\anyMove.c -o CMakeFiles\assignment2.dir\anyMove.c.s
+
+CMakeFiles/assignment2.dir/endGame.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/endGame.c.obj: ../endGame.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/assignment2.dir/endGame.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\endGame.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\endGame.c
+
+CMakeFiles/assignment2.dir/endGame.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/endGame.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\endGame.c > CMakeFiles\assignment2.dir\endGame.c.i
+
+CMakeFiles/assignment2.dir/endGame.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/endGame.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\endGame.c -o CMakeFiles\assignment2.dir\endGame.c.s
+
 # Object files for target assignment2
 assignment2_OBJECTS = \
 "CMakeFiles/assignment2.dir/main.c.obj" \
 "CMakeFiles/assignment2.dir/initialiseGame.c.obj" \
 "CMakeFiles/assignment2.dir/playerMove.c.obj" \
-"CMakeFiles/assignment2.dir/gameInfo.c.obj"
+"CMakeFiles/assignment2.dir/gameInfo.c.obj" \
+"CMakeFiles/assignment2.dir/validMoveFinder.c.obj" \
+"CMakeFiles/assignment2.dir/isSandwich.c.obj" \
+"CMakeFiles/assignment2.dir/anyMove.c.obj" \
+"CMakeFiles/assignment2.dir/endGame.c.obj"
 
 # External object files for target assignment2
 assignment2_EXTERNAL_OBJECTS =
@@ -142,11 +198,15 @@ assignment2.exe: CMakeFiles/assignment2.dir/main.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/initialiseGame.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/playerMove.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/gameInfo.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/validMoveFinder.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/isSandwich.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/anyMove.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/endGame.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/build.make
 assignment2.exe: CMakeFiles/assignment2.dir/linklibs.rsp
 assignment2.exe: CMakeFiles/assignment2.dir/objects1.rsp
 assignment2.exe: CMakeFiles/assignment2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable assignment2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable assignment2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\assignment2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

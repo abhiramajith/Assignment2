@@ -142,6 +142,60 @@ assignment2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/build
 .PHONY : assignment2/fast
 
+anyMove.obj: anyMove.c.obj
+
+.PHONY : anyMove.obj
+
+# target to build an object file
+anyMove.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/anyMove.c.obj
+.PHONY : anyMove.c.obj
+
+anyMove.i: anyMove.c.i
+
+.PHONY : anyMove.i
+
+# target to preprocess a source file
+anyMove.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/anyMove.c.i
+.PHONY : anyMove.c.i
+
+anyMove.s: anyMove.c.s
+
+.PHONY : anyMove.s
+
+# target to generate assembly for a file
+anyMove.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/anyMove.c.s
+.PHONY : anyMove.c.s
+
+endGame.obj: endGame.c.obj
+
+.PHONY : endGame.obj
+
+# target to build an object file
+endGame.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/endGame.c.obj
+.PHONY : endGame.c.obj
+
+endGame.i: endGame.c.i
+
+.PHONY : endGame.i
+
+# target to preprocess a source file
+endGame.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/endGame.c.i
+.PHONY : endGame.c.i
+
+endGame.s: endGame.c.s
+
+.PHONY : endGame.s
+
+# target to generate assembly for a file
+endGame.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/endGame.c.s
+.PHONY : endGame.c.s
+
 gameInfo.obj: gameInfo.c.obj
 
 .PHONY : gameInfo.obj
@@ -195,6 +249,33 @@ initialiseGame.s: initialiseGame.c.s
 initialiseGame.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/initialiseGame.c.s
 .PHONY : initialiseGame.c.s
+
+isSandwich.obj: isSandwich.c.obj
+
+.PHONY : isSandwich.obj
+
+# target to build an object file
+isSandwich.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/isSandwich.c.obj
+.PHONY : isSandwich.c.obj
+
+isSandwich.i: isSandwich.c.i
+
+.PHONY : isSandwich.i
+
+# target to preprocess a source file
+isSandwich.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/isSandwich.c.i
+.PHONY : isSandwich.c.i
+
+isSandwich.s: isSandwich.c.s
+
+.PHONY : isSandwich.s
+
+# target to generate assembly for a file
+isSandwich.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/isSandwich.c.s
+.PHONY : isSandwich.c.s
 
 main.obj: main.c.obj
 
@@ -250,6 +331,33 @@ playerMove.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/playerMove.c.s
 .PHONY : playerMove.c.s
 
+validMoveFinder.obj: validMoveFinder.c.obj
+
+.PHONY : validMoveFinder.obj
+
+# target to build an object file
+validMoveFinder.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveFinder.c.obj
+.PHONY : validMoveFinder.c.obj
+
+validMoveFinder.i: validMoveFinder.c.i
+
+.PHONY : validMoveFinder.i
+
+# target to preprocess a source file
+validMoveFinder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveFinder.c.i
+.PHONY : validMoveFinder.c.i
+
+validMoveFinder.s: validMoveFinder.c.s
+
+.PHONY : validMoveFinder.s
+
+# target to generate assembly for a file
+validMoveFinder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveFinder.c.s
+.PHONY : validMoveFinder.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -259,18 +367,30 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... assignment2
+	@echo ... anyMove.obj
+	@echo ... anyMove.i
+	@echo ... anyMove.s
+	@echo ... endGame.obj
+	@echo ... endGame.i
+	@echo ... endGame.s
 	@echo ... gameInfo.obj
 	@echo ... gameInfo.i
 	@echo ... gameInfo.s
 	@echo ... initialiseGame.obj
 	@echo ... initialiseGame.i
 	@echo ... initialiseGame.s
+	@echo ... isSandwich.obj
+	@echo ... isSandwich.i
+	@echo ... isSandwich.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... playerMove.obj
 	@echo ... playerMove.i
 	@echo ... playerMove.s
+	@echo ... validMoveFinder.obj
+	@echo ... validMoveFinder.i
+	@echo ... validMoveFinder.s
 .PHONY : help
 
 

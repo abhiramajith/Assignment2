@@ -74,10 +74,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/anyMove.c">
+			<Option target="assignment2"/>
+		</Unit>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/endGame.c">
+			<Option target="assignment2"/>
+		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/gameInfo.c">
 			<Option target="assignment2"/>
 		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/initialiseGame.c">
+			<Option target="assignment2"/>
+		</Unit>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/isSandwich.c">
 			<Option target="assignment2"/>
 		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/library.h">
@@ -87,6 +96,9 @@
 			<Option target="assignment2"/>
 		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/playerMove.c">
+			<Option target="assignment2"/>
+		</Unit>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/validMoveFinder.c">
 			<Option target="assignment2"/>
 		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/CMakeLists.txt">
