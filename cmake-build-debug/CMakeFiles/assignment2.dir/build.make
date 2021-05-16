@@ -89,19 +89,64 @@ CMakeFiles/assignment2.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/main.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\main.c -o CMakeFiles\assignment2.dir\main.c.s
 
+CMakeFiles/assignment2.dir/initialiseGame.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/initialiseGame.c.obj: ../initialiseGame.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/assignment2.dir/initialiseGame.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\initialiseGame.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\initialiseGame.c
+
+CMakeFiles/assignment2.dir/initialiseGame.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/initialiseGame.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\initialiseGame.c > CMakeFiles\assignment2.dir\initialiseGame.c.i
+
+CMakeFiles/assignment2.dir/initialiseGame.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/initialiseGame.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\initialiseGame.c -o CMakeFiles\assignment2.dir\initialiseGame.c.s
+
+CMakeFiles/assignment2.dir/playerMove.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/playerMove.c.obj: ../playerMove.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/assignment2.dir/playerMove.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\playerMove.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\playerMove.c
+
+CMakeFiles/assignment2.dir/playerMove.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/playerMove.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\playerMove.c > CMakeFiles\assignment2.dir\playerMove.c.i
+
+CMakeFiles/assignment2.dir/playerMove.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/playerMove.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\playerMove.c -o CMakeFiles\assignment2.dir\playerMove.c.s
+
+CMakeFiles/assignment2.dir/gameInfo.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/gameInfo.c.obj: ../gameInfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/assignment2.dir/gameInfo.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\gameInfo.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\gameInfo.c
+
+CMakeFiles/assignment2.dir/gameInfo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/gameInfo.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\gameInfo.c > CMakeFiles\assignment2.dir\gameInfo.c.i
+
+CMakeFiles/assignment2.dir/gameInfo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/gameInfo.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\gameInfo.c -o CMakeFiles\assignment2.dir\gameInfo.c.s
+
 # Object files for target assignment2
 assignment2_OBJECTS = \
-"CMakeFiles/assignment2.dir/main.c.obj"
+"CMakeFiles/assignment2.dir/main.c.obj" \
+"CMakeFiles/assignment2.dir/initialiseGame.c.obj" \
+"CMakeFiles/assignment2.dir/playerMove.c.obj" \
+"CMakeFiles/assignment2.dir/gameInfo.c.obj"
 
 # External object files for target assignment2
 assignment2_EXTERNAL_OBJECTS =
 
 assignment2.exe: CMakeFiles/assignment2.dir/main.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/initialiseGame.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/playerMove.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/gameInfo.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/build.make
 assignment2.exe: CMakeFiles/assignment2.dir/linklibs.rsp
 assignment2.exe: CMakeFiles/assignment2.dir/objects1.rsp
 assignment2.exe: CMakeFiles/assignment2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable assignment2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable assignment2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\assignment2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

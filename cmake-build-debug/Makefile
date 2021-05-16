@@ -142,6 +142,60 @@ assignment2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/build
 .PHONY : assignment2/fast
 
+gameInfo.obj: gameInfo.c.obj
+
+.PHONY : gameInfo.obj
+
+# target to build an object file
+gameInfo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/gameInfo.c.obj
+.PHONY : gameInfo.c.obj
+
+gameInfo.i: gameInfo.c.i
+
+.PHONY : gameInfo.i
+
+# target to preprocess a source file
+gameInfo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/gameInfo.c.i
+.PHONY : gameInfo.c.i
+
+gameInfo.s: gameInfo.c.s
+
+.PHONY : gameInfo.s
+
+# target to generate assembly for a file
+gameInfo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/gameInfo.c.s
+.PHONY : gameInfo.c.s
+
+initialiseGame.obj: initialiseGame.c.obj
+
+.PHONY : initialiseGame.obj
+
+# target to build an object file
+initialiseGame.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/initialiseGame.c.obj
+.PHONY : initialiseGame.c.obj
+
+initialiseGame.i: initialiseGame.c.i
+
+.PHONY : initialiseGame.i
+
+# target to preprocess a source file
+initialiseGame.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/initialiseGame.c.i
+.PHONY : initialiseGame.c.i
+
+initialiseGame.s: initialiseGame.c.s
+
+.PHONY : initialiseGame.s
+
+# target to generate assembly for a file
+initialiseGame.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/initialiseGame.c.s
+.PHONY : initialiseGame.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -169,6 +223,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/main.c.s
 .PHONY : main.c.s
 
+playerMove.obj: playerMove.c.obj
+
+.PHONY : playerMove.obj
+
+# target to build an object file
+playerMove.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/playerMove.c.obj
+.PHONY : playerMove.c.obj
+
+playerMove.i: playerMove.c.i
+
+.PHONY : playerMove.i
+
+# target to preprocess a source file
+playerMove.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/playerMove.c.i
+.PHONY : playerMove.c.i
+
+playerMove.s: playerMove.c.s
+
+.PHONY : playerMove.s
+
+# target to generate assembly for a file
+playerMove.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/playerMove.c.s
+.PHONY : playerMove.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -178,9 +259,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... assignment2
+	@echo ... gameInfo.obj
+	@echo ... gameInfo.i
+	@echo ... gameInfo.s
+	@echo ... initialiseGame.obj
+	@echo ... initialiseGame.i
+	@echo ... initialiseGame.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... playerMove.obj
+	@echo ... playerMove.i
+	@echo ... playerMove.s
 .PHONY : help
 
 

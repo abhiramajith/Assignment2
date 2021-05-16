@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/Abhiram/C_programs/Assignment/gameInfo.c" "C:/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles/assignment2.dir/gameInfo.c.obj"
+  "C:/Users/Abhiram/C_programs/Assignment/initialiseGame.c" "C:/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles/assignment2.dir/initialiseGame.c.obj"
   "C:/Users/Abhiram/C_programs/Assignment/main.c" "C:/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles/assignment2.dir/main.c.obj"
+  "C:/Users/Abhiram/C_programs/Assignment/playerMove.c" "C:/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles/assignment2.dir/playerMove.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

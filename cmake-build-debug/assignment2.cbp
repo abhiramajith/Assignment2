@@ -74,7 +74,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/gameInfo.c">
+			<Option target="assignment2"/>
+		</Unit>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/initialiseGame.c">
+			<Option target="assignment2"/>
+		</Unit>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/library.h">
+			<Option target="assignment2"/>
+		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/main.c">
+			<Option target="assignment2"/>
+		</Unit>
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/playerMove.c">
 			<Option target="assignment2"/>
 		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/CMakeLists.txt">
