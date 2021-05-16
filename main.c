@@ -438,11 +438,15 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
 int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
-    bool isSandwich = false; //Truth value for whether there is a player piece 
-    unsigned char playerColour;
-    int e = a - c;
-    int f = b - d;
+    bool isSandwich = false; //Truth value for whether there is a player piece sandwiching opponent piece
 
+    unsigned char playerColour; //Holds players colour
+
+    //Using the difference between the two points you can find which direction to search in
+    int e = a - c; // e holds the difference of a and c
+    int f = b - d; // f holds the difference of a and c
+
+    //assigning correct player colour to playerColour
     if (colour == colours[0]) {
         playerColour = colours[0];
     }
@@ -450,98 +454,134 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
         playerColour = colours[1];
     }
 
-
-
+    //An e of 1 and f of 0 means you should search in a straight line above the current move
     if ( e == 1 && f == 0){
-        flip:
-        for (int i = c; i >= 0; i--){
 
-            if (isSandwich && check == 0){
-                if (board.board[i][d] == playerColour){
-                    return 1;
+        flip: //label that is called when opponent pieces need to be flipped to player colour
+
+        for (int i = c; i >= 0; i--){ //for loop starting at row of opponent piece and moves up the board with each iteration
+
+            if (isSandwich && check == 0){ //this if statement only runs if isSandwich is true and check is 0, this indicates changes should be made to the board
+
+                if (board.board[i][d] == playerColour){ //If the position [i][d] on the board is a piece of the players colour (moving up on rows but column stays the same)
+
+                    return 1; //Signifies that a players piece has been found so stop searching
                 }
-                board.board[i][d] = playerColour;
+
+                board.board[i][d] = playerColour; //Turning opponent pieces to player pieces
             }
 
-            if(isSandwich && check == 1){
+            if(isSandwich && check == 1){ //if isSandwich is true and check == 1 this means the function was called by anyMove to observe if there is a valid move to be
+                                          //made without making changes to the board
+
                 if (board.board[i][d] == playerColour){
-                    return 1;
+
+                    return 1; //Stop searching
                 }
+
             }
 
-            if (board.board[i][d] == board.symbol){
-                return -1;
+            if (board.board[i][d] == board.symbol){ //If an empty space is found
+
+                return -1; //returning -1 means the current moves is not part of a sandwich
             }
 
 
-            if (board.board[i][d] == playerColour && !isSandwich){
+            if (board.board[i][d] == playerColour && !isSandwich){ //If a player piece is found and isSandwich is false
+
+                //isSandwich is set to true as there is a player piece sandwiching the opponent pieces with the current move
                 isSandwich = true;
-                goto flip;
+
+                goto flip; /* goto line 460 as now isSandwich is true so opponent pieces can be flipped to players colour */
 
             }
 
         }
-        return -1;
+        return -1; //No sandwich is found
 
     }
 
+    //An e of -1 and f of 0 means you should search in a straight line below the current move
     else if (e == -1 && f == 0){
+
         flip2:
-        for (int i = c; i <= 7; i++){
+
+        for (int i = c; i <= 7; i++){//for loop starting at row of opponent piece and moves down the board with each iteration
 
             if (isSandwich && check == 0){
+
                 if (board.board[i][d] == playerColour){
-                    return 1;
+
+                    return 1; //sandwich found
                 }
-                board.board[i][d] = playerColour;
+
+                board.board[i][d] = playerColour; //flip to playerColour
             }
 
             if(isSandwich && check == 1){
+
                 if (board.board[i][d] == playerColour){
-                    return 1;
-                }
+
+                    return 1; //sandwich found
             }
 
             if (board.board[i][d] == board.symbol){
-                return -1;
+
+            }
+                return -1; //No sandwich is found
+
             }
 
 
             if (board.board[i][d] == playerColour && !isSandwich){
+
                 isSandwich = true;
-                goto flip2;
+
+                goto flip2; //goto line 507
+
             }
         }
-        return -1;
+
+        return -1; //No sandwich is found
+
     }
 
+    //An e of 0 and f of 1 means you should search in a straight line left of the current move
     else if (e == 0 && f == 1){
+
         flip3:
-        for (int j = d; j >= 0; j--){
+
+        for (int j = d; j >= 0; j--){ //for loop starting at column of opponent piece and moves left of the board with each iteration
 
             if (isSandwich && check == 0){
                 if (board.board[c][j] == playerColour){
-                    return 1;
+
+                    return 1; //sandwich found
                 }
+
                 board.board[c][j] = playerColour;
             }
 
             if(isSandwich && check == 1){
                 if (board.board[c][j] == playerColour){
-                    return 1;
+
+                    return 1; //sandwich found
                 }
             }
 
             if (board.board[c][j] == board.symbol){
-                return -1;
+
+                return -1; //No sandwich is found
             }
 
             if (board.board[c][j] == playerColour && !isSandwich){
+
                 isSandwich = true;
-                goto flip3;
+
+                goto flip3; //goto line 552
             }
         }
-        return -1;
+        return -1; //No sandwich is found
 
     }
 
