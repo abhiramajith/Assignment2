@@ -7,7 +7,7 @@
 //This function is for printing the board to the user
 void printBoard(Game_Board Board) {
 
-    printf("\n|Score: %s (B) - %d | %s (W) - %d|\n",player1, count(colours[0], board), player2, count(colours[1], board)); //Print the score at the top
+    printf("\n|Score: %s (B) - %d | %s (W) - %d|\n",Player[0].playerName, count(colours[0], board), Player[1].playerName, count(colours[1], board)); //Print the score at the top
 
     printf("  a b c d e f g h \n"); //Top Label for columns of board
 

@@ -22,10 +22,6 @@ int assignPlayers(void){
     printf("%s is black \n", Player[0].playerName);
     printf("%s is white \n", Player[1].playerName);
 
-    strcpy(player2, Player[1].playerName);
-    strcpy(player1, Player[0].playerName);
-
-
     printf("%s plays first as they control black.\n", Player[0].playerName);
     return 0;
 }
