@@ -59,11 +59,11 @@ void outFile(int winCheck, int score0, int score1){
 
             //Writing date and time at start of game to file using time.h library functions
             char dateTime[30]; //Holds date and time
-            struct tm Time;
-            time_t currentTime;
-            currentTime = time(NULL);
-            Time = *(localtime(&currentTime));
-            strftime(dateTime, 30, "%b %d, %Y; %H:%M\n", &Time); //strftime formats time as string
+            struct tm tim;
+            time_t now;
+            now = time(NULL);
+            tim = *(localtime(&now));
+            strftime(dateTime, 30, "%b %d, %Y; %H:%M\n", &tim); //strftime formats time as string
             fprintf(cfPtr, "%s", dateTime); //Printing date & time to file
         }
 

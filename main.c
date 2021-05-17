@@ -1,11 +1,22 @@
 #include "library.h"
 
+//global variables
+int row = 0, col = 0;
+int gameWon = 0; //signifies if the game has been won
+char player1[NAME_SIZE], player2[NAME_SIZE]; //holds name of player1 and 2
+bool bValidmove = true; //holds whether there exists valid move for black
+bool wValidmove = true; //holds whether there exists valid move for white
+char colours[NUM_OF_COLOURS] = {'B', 'W'}; //Holds game pieces/player colours
 
 int main() {
-    int wincheck = 0;
+
+    int wincheck = 0; //wincheck is needed for outFile function, wincheck of 0 allows for time of game start to be written to the outfile
+
     board.symbol = '.'; //symbol to show empty spaces on board
-    board.row = 8;
-    board.col = 8;
+
+    //Setting size of rows and columns
+    board.row = BOARD_SIZE;
+    board.col = BOARD_SIZE;
 
     initializeBoard(); //calling function to set up board
 

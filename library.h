@@ -37,12 +37,12 @@ typedef struct game_board
 Game_Board board; //Declaring synonym as global variable so board can be referenced and altered in any function
 
 //global variables
-int row = 0, col = 0;
-int gameWon = 0; //signifies if the game has been won
+int row , col ;
+int gameWon ; //signifies if the game has been won
 char player1[NAME_SIZE], player2[NAME_SIZE]; //holds name of player1 and 2
-bool bValidmove = true; //holds whether there exists valid move for black
-bool wValidmove = true; //holds whether there exists valid move for white
-char colours[NUM_OF_COLOURS] = {'B', 'W'}; //Holds game pieces/player colours
+bool bValidmove; //holds whether there exists valid move for black
+bool wValidmove; //holds whether there exists valid move for white
+char colours[NUM_OF_COLOURS]; //Holds game pieces/player colours
 
 //function prototypes
 int initializeBoard();

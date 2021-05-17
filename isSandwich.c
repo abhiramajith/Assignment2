@@ -101,12 +101,11 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
                     return 1; //sandwich found
                 }
+            }
 
-                if (board.board[i][d] == board.symbol){
+            if (board.board[i][d] == board.symbol){
 
-                }
                 return -1; //No sandwich is found
-
             }
 
 
