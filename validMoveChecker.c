@@ -28,7 +28,7 @@ int validMove (int a, int b, unsigned char colour, int check){
 int legalMove(int a, int b, unsigned char colour, int check){
 
     bool oppAdj = false; //Truth value (Tv) for if there is an opponent piece adjacent to the current move
-    bool isBet = false; //Tv for if the current move is between another piece of the same colour
+    bool isSand = false; //Tv for if the current move sanwiches opponent pieces wwith another player piece
 
     //Truth values for whether the move made is on the top, left, bottom or right perimeter of the board respectively
     //This must be taken into account as for move on the perimeter you ar not able to check all positions around current move depending on which perimeter it is on
@@ -42,10 +42,10 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     //These variables represent areas around the current move
 
-    int upx = a-1; //upx refers to the row above the current move
-    int botx = a+1; //botx refers to row below
-    int leftY = b-1; // column to the left
-    int rightY = b+1; //column to the right
+    int upA = a-1; //upA refers to the row above the current move
+    int botA = a+1; //botA refers to row below
+    int leftB = b-1; // column to the left
+    int rightB = b+1; //column to the right
 
     if ( a == 0 ){ //If a is 0 the move is on the top perimeter
         topPerim = true;
@@ -71,115 +71,115 @@ int legalMove(int a, int b, unsigned char colour, int check){
         oppColour = colours[0];
     }
 
-    if (board.board[upx][b] == oppColour && !topPerim){ //if piece above is of opposite colour and current move is not on top perimeter
+    if (board.board[upA][b] == oppColour && !topPerim){ //if piece above is of opposite colour and current move is not on top perimeter
 
         /*isSandwich takes in the current move (a, b) and the co-ordinate of an opponent piece and checks if there is a piece of the player's
          * colour anywhere in the same line*/
 
-        if (isSandwich(a, b, upx, b, playerColour,check) == -1){ //If call to isSandwich returns -1
-            isBet = false; //not between any piece above
+        if (isSandwich(a, b, upA, b, playerColour,check) == -1){ //If call to isSandwich returns -1
+            isSand = false; //not between any piece above
         }
 
         else{
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
-    if (board.board[upx][leftY] == oppColour && !leftPerim && !topPerim){ //if piece on top left diagonal is of opposite colour and current move is not on left perimeter or top perimeter
+    if (board.board[upA][leftB] == oppColour && !leftPerim && !topPerim){ //if piece on top left diagonal is of opposite colour and current move is not on left perimeter or top perimeter
 
-        if (isSandwich(a, b, upx, leftY, playerColour,check) == -1){
-            isBet = false;
+        if (isSandwich(a, b, upA, leftB, playerColour,check) == -1){
+            isSand = false;
         }
 
         else{ //there is another piece of player's colour sandwiching opponents pieces to top left diagonal of current move
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
-    if (board.board[upx][rightY] == oppColour && !topPerim && !rightPerim){ //if piece on top right diagonal is of the opposite colour and current move is not on top perimeter or right perimeter
+    if (board.board[upA][rightB] == oppColour && !topPerim && !rightPerim){ //if piece on top right diagonal is of the opposite colour and current move is not on top perimeter or right perimeter
 
-        if (isSandwich(a, b, upx, rightY, playerColour,check) == -1){
-            isBet = false;
+        if (isSandwich(a, b, upA, rightB, playerColour,check) == -1){
+            isSand = false;
         }
 
         else{ //there is another piece of the player's colour sandwiching the opponents pieces to the top right diagonal of the current move
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
-    if (board.board[botx][b] == oppColour && !botPerim){ //if piece on bottom is of the opposite colour and current move is not on bottom perimeter
+    if (board.board[botA][b] == oppColour && !botPerim){ //if piece on bottom is of the opposite colour and current move is not on bottom perimeter
 
-        if (isSandwich(a, b, botx, b, playerColour,check) == -1){
-            isBet = false;
+        if (isSandwich(a, b, botA, b, playerColour,check) == -1){
+            isSand = false;
         }
 
         else{ //there is another piece of the player's colour sandwiching the opponents pieces to bottom of current move
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
-    if (board.board[botx][leftY] == oppColour && !leftPerim && !botPerim){ //if piece on bottom left diagonal is of opposite colour and current move is not on left perimeter or bottom perimeter
+    if (board.board[botA][leftB] == oppColour && !leftPerim && !botPerim){ //if piece on bottom left diagonal is of opposite colour and current move is not on left perimeter or bottom perimeter
 
-        if (isSandwich(a, b, botx,leftY, playerColour,check) == -1){
-            isBet = false;
+        if (isSandwich(a, b, botA,leftB, playerColour,check) == -1){
+            isSand = false;
         }
 
         else{ //there is another piece of the player's colour sandwiching the opponents pieces to bottom left diagonal of current move
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
-    if (board.board[botx][rightY] == oppColour && !rightPerim && !botPerim){ //if piece on bottom right diagonal is of opposite colour and current move is not on right perimeter or bottom perimeter
+    if (board.board[botA][rightB] == oppColour && !rightPerim && !botPerim){ //if piece on bottom right diagonal is of opposite colour and current move is not on right perimeter or bottom perimeter
 
-        if (isSandwich(a, b, botx, rightY, playerColour,check) == -1){
-            isBet = false;
+        if (isSandwich(a, b, botA, rightB, playerColour,check) == -1){
+            isSand = false;
         }
 
         else{ //there is another piece of the player's colour sandwiching the opponents pieces to bottom right diagonal of current move
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
 
-    if (board.board[a][leftY] == oppColour && !leftPerim){ //if piece on left is of opposite colour and current move is not on left perimeter
+    if (board.board[a][leftB] == oppColour && !leftPerim){ //if piece on left is of opposite colour and current move is not on left perimeter
 
-        if (isSandwich(a, b, a, leftY, playerColour,check) == -1){
-            isBet = false;
+        if (isSandwich(a, b, a, leftB, playerColour,check) == -1){
+            isSand = false;
         }
 
         else{ //there is another piece of the player's colour sandwiching the opponents pieces to left of current move
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
-    if (board.board[a][rightY] == oppColour && !rightPerim){ //if piece on right is of opposite colour and current move is not on right perimeter
+    if (board.board[a][rightB] == oppColour && !rightPerim){ //if piece on right is of opposite colour and current move is not on right perimeter
 
-        if ( isSandwich(a, b, a, rightY, playerColour,check) == -1){
-            isBet = false;
+        if ( isSandwich(a, b, a, rightB, playerColour,check) == -1){
+            isSand = false;
         }
 
         else{ //there is another piece of the player's colour sandwiching the opponents pieces to right of current move
             oppAdj = true;
-            isBet = true;
+            isSand = true;
         }
 
     }
 
-    if(!oppAdj && !isBet){ //if no opponent piece adjacent to current move and no player piece sandwiches opponent pieces
+    if(!oppAdj && !isSand){ //if no opponent piece adjacent to current move and no player piece sandwiches opponent pieces
 
         return 1; //Signifies illegal move
 

@@ -98,7 +98,7 @@
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/playerMove.c">
 			<Option target="assignment2"/>
 		</Unit>
-		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/validMoveFinder.c">
+		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/validMoveChecker.c">
 			<Option target="assignment2"/>
 		</Unit>
 		<Unit filename="C:/Users/Abhiram/C_programs/Assignment/CMakeLists.txt">

@@ -331,32 +331,32 @@ playerMove.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/playerMove.c.s
 .PHONY : playerMove.c.s
 
-validMoveFinder.obj: validMoveFinder.c.obj
+validMoveChecker.obj: validMoveChecker.c.obj
 
-.PHONY : validMoveFinder.obj
+.PHONY : validMoveChecker.obj
 
 # target to build an object file
-validMoveFinder.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveFinder.c.obj
-.PHONY : validMoveFinder.c.obj
+validMoveChecker.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveChecker.c.obj
+.PHONY : validMoveChecker.c.obj
 
-validMoveFinder.i: validMoveFinder.c.i
+validMoveChecker.i: validMoveChecker.c.i
 
-.PHONY : validMoveFinder.i
+.PHONY : validMoveChecker.i
 
 # target to preprocess a source file
-validMoveFinder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveFinder.c.i
-.PHONY : validMoveFinder.c.i
+validMoveChecker.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveChecker.c.i
+.PHONY : validMoveChecker.c.i
 
-validMoveFinder.s: validMoveFinder.c.s
+validMoveChecker.s: validMoveChecker.c.s
 
-.PHONY : validMoveFinder.s
+.PHONY : validMoveChecker.s
 
 # target to generate assembly for a file
-validMoveFinder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveFinder.c.s
-.PHONY : validMoveFinder.c.s
+validMoveChecker.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assignment2.dir\build.make CMakeFiles/assignment2.dir/validMoveChecker.c.s
+.PHONY : validMoveChecker.c.s
 
 # Help Target
 help:
@@ -388,9 +388,9 @@ help:
 	@echo ... playerMove.obj
 	@echo ... playerMove.i
 	@echo ... playerMove.s
-	@echo ... validMoveFinder.obj
-	@echo ... validMoveFinder.i
-	@echo ... validMoveFinder.s
+	@echo ... validMoveChecker.obj
+	@echo ... validMoveChecker.i
+	@echo ... validMoveChecker.s
 .PHONY : help
 
 

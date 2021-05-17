@@ -22,6 +22,6 @@ CMakeFiles/assignment2.dir/main.c.obj: ../main.c
 CMakeFiles/assignment2.dir/playerMove.c.obj: ../library.h
 CMakeFiles/assignment2.dir/playerMove.c.obj: ../playerMove.c
 
-CMakeFiles/assignment2.dir/validMoveFinder.c.obj: ../library.h
-CMakeFiles/assignment2.dir/validMoveFinder.c.obj: ../validMoveFinder.c
+CMakeFiles/assignment2.dir/validMoveChecker.c.obj: ../library.h
+CMakeFiles/assignment2.dir/validMoveChecker.c.obj: ../validMoveChecker.c
 

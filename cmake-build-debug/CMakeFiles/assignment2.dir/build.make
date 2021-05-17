@@ -128,18 +128,18 @@ CMakeFiles/assignment2.dir/gameInfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/gameInfo.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\gameInfo.c -o CMakeFiles\assignment2.dir\gameInfo.c.s
 
-CMakeFiles/assignment2.dir/validMoveFinder.c.obj: CMakeFiles/assignment2.dir/flags.make
-CMakeFiles/assignment2.dir/validMoveFinder.c.obj: ../validMoveFinder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/assignment2.dir/validMoveFinder.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\validMoveFinder.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\validMoveFinder.c
+CMakeFiles/assignment2.dir/validMoveChecker.c.obj: CMakeFiles/assignment2.dir/flags.make
+CMakeFiles/assignment2.dir/validMoveChecker.c.obj: ../validMoveChecker.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Abhiram\C_programs\Assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/assignment2.dir/validMoveChecker.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\assignment2.dir\validMoveChecker.c.obj   -c C:\Users\Abhiram\C_programs\Assignment\validMoveChecker.c
 
-CMakeFiles/assignment2.dir/validMoveFinder.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/validMoveFinder.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\validMoveFinder.c > CMakeFiles\assignment2.dir\validMoveFinder.c.i
+CMakeFiles/assignment2.dir/validMoveChecker.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/assignment2.dir/validMoveChecker.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Abhiram\C_programs\Assignment\validMoveChecker.c > CMakeFiles\assignment2.dir\validMoveChecker.c.i
 
-CMakeFiles/assignment2.dir/validMoveFinder.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/validMoveFinder.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\validMoveFinder.c -o CMakeFiles\assignment2.dir\validMoveFinder.c.s
+CMakeFiles/assignment2.dir/validMoveChecker.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/assignment2.dir/validMoveChecker.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Abhiram\C_programs\Assignment\validMoveChecker.c -o CMakeFiles\assignment2.dir\validMoveChecker.c.s
 
 CMakeFiles/assignment2.dir/isSandwich.c.obj: CMakeFiles/assignment2.dir/flags.make
 CMakeFiles/assignment2.dir/isSandwich.c.obj: ../isSandwich.c
@@ -186,7 +186,7 @@ assignment2_OBJECTS = \
 "CMakeFiles/assignment2.dir/initialiseGame.c.obj" \
 "CMakeFiles/assignment2.dir/playerMove.c.obj" \
 "CMakeFiles/assignment2.dir/gameInfo.c.obj" \
-"CMakeFiles/assignment2.dir/validMoveFinder.c.obj" \
+"CMakeFiles/assignment2.dir/validMoveChecker.c.obj" \
 "CMakeFiles/assignment2.dir/isSandwich.c.obj" \
 "CMakeFiles/assignment2.dir/anyMove.c.obj" \
 "CMakeFiles/assignment2.dir/endGame.c.obj"
@@ -198,7 +198,7 @@ assignment2.exe: CMakeFiles/assignment2.dir/main.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/initialiseGame.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/playerMove.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/gameInfo.c.obj
-assignment2.exe: CMakeFiles/assignment2.dir/validMoveFinder.c.obj
+assignment2.exe: CMakeFiles/assignment2.dir/validMoveChecker.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/isSandwich.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/anyMove.c.obj
 assignment2.exe: CMakeFiles/assignment2.dir/endGame.c.obj

@@ -46,9 +46,13 @@ If the move is in the bounds of the board the function then checks if there is a
 the entered move is not valid and if it is false 0 is returned. In the call to validMove from playerMove if 1 is returned by validMove the player is informed their move is 
 invalid and the function makes them choose a new move.
 
-In othello a legal move consists of one that has at least one opponent piece adjacent to the current move and there must be a player's piece sandwiching the opponent piece with the
+In othello a legal move consists of one that has at least one opponent piece adjacent to the current move and there must be a player's piece sandwiching the opponent piece(s) with the
 current move with no empty spaces in between. I implemented this part of the game in my assignment using legalMove which checks if an entered move has an opponent piece anywhere adjacent
 within a 1 space vicinity and with the function isSandwich which is called when an adjacent opponent piece is found and looks for a piece of the player's colour to sandwich the opponent's
-piece(s) and flip them to the player's colour.
+piece(s) and flip them to the player's colour. The function legalMove takes in a move on the board, a colour and a check number (explained above). It contains boolean values to hold whether 
+there is an opponent piece adjacent to the move entered (` bool oppAdj = false;`) and if the current move sandwiches opponent pieces with another player piece (`bool isSand = false;`). I also 
+had to create boolean variables for holding truth values for whether a move is on any of the 4 perimeters of the board (`bool topPerim = false; bool leftPerim = false; bool botPerim = false; bool rightPerim = false;`).
+This had to be accounted for as, for pieces on the perimeter you cannot check every space around them as some are off the board so using these variables certain moves can be flagged.  
+I also created 4 variables to hold values for different positions around the move. For example the variable upx is assigned to 
 
 
