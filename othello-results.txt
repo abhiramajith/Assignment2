@@ -1,1 +1,13 @@
-May 18, 2021; 11:31
+May 18, 2021; 11:59
+|Final score: b - 42 : a - 22|
+b won the game.
+
+May 18, 2021; 11:59
+|Final score: a - 35 : b - 29|
+a won the game.
+
+May 18, 2021; 12:00
+May 18, 2021; 12:04
+|Final score: a - 13 : b - 0|
+a won the game.
+

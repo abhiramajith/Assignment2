@@ -26,12 +26,6 @@ int legalMove(int a, int b, unsigned char colour, int check){
     bool oppAdj = false; //Truth value (Tv) for if there is an opponent piece adjacent to the current move
     bool isSand = false; //Tv for if the current move sanwiches opponent pieces wwith another player piece
 
-    //Truth values for whether the move made is on the top, left, bottom or right perimeter of the board respectively
-    //This must be taken into account as for move on the perimeter you ar not able to check all positions around current move depending on which perimeter it is on
-    bool topPerim = false;
-    bool leftPerim = false;
-    bool botPerim = false;
-    bool rightPerim = false;
 
     unsigned char playerColour;
     unsigned char oppColour;
@@ -42,24 +36,6 @@ int legalMove(int a, int b, unsigned char colour, int check){
     int botA = a+1; //botA refers to row below
     int leftB = b-1; // column to the left
     int rightB = b+1; //column to the right
-
-    if ( a == 0 ){ //If a is 0 the move is on the top perimeter
-
-        topPerim = true;
-    }
-    if ( b == 0 ){ //left perimeter
-
-        leftPerim = true;
-    }
-    if ( a == 7 ){ //bottom perimeter
-
-        botPerim = true;
-    }
-    if (b == 7){ //right perimeter
-
-        rightPerim = true;
-    }
-
 
     if (colour == colours[0]) { //If passed in colour = B
 
@@ -73,7 +49,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
         oppColour = colours[0];
     }
 
-    if (board.board[upA][b] == oppColour && !topPerim){ //if piece above is of opposite colour and current move is not on top perimeter
+    if (board.board[upA][b] == oppColour){ //if piece above is of opposite colour
 
         /*isSandwich takes in the current move (a, b) and the co-ordinate of an opponent piece and checks if there is a piece of the player's
          * colour anywhere in the same line*/
@@ -91,7 +67,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     }
 
-    if (board.board[upA][leftB] == oppColour && !leftPerim && !topPerim){ //if piece on top left diagonal is of opposite colour and current move is not on left perimeter or top perimeter
+    if (board.board[upA][leftB] == oppColour){ //if piece on top left diagonal is of opposite colour
 
         if (isSandwich(a, b, upA, leftB, playerColour,check) == -1){
 
@@ -106,7 +82,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     }
 
-    if (board.board[upA][rightB] == oppColour && !topPerim && !rightPerim){ //if piece on top right diagonal is of the opposite colour and current move is not on top perimeter or right perimeter
+    if (board.board[upA][rightB] == oppColour){ //if piece on top right diagonal is of the opposite colour
 
         if (isSandwich(a, b, upA, rightB, playerColour,check) == -1){
 
@@ -121,7 +97,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     }
 
-    if (board.board[botA][b] == oppColour && !botPerim){ //if piece on bottom is of the opposite colour and current move is not on bottom perimeter
+    if (board.board[botA][b] == oppColour){ //if piece on bottom is of the opposite colour
 
         if (isSandwich(a, b, botA, b, playerColour,check) == -1){
 
@@ -136,7 +112,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     }
 
-    if (board.board[botA][leftB] == oppColour && !leftPerim && !botPerim){ //if piece on bottom left diagonal is of opposite colour and current move is not on left perimeter or bottom perimeter
+    if (board.board[botA][leftB] == oppColour){ //if piece on bottom left diagonal is of opposite colour
 
         if (isSandwich(a, b, botA,leftB, playerColour,check) == -1){
 
@@ -151,7 +127,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     }
 
-    if (board.board[botA][rightB] == oppColour && !rightPerim && !botPerim){ //if piece on bottom right diagonal is of opposite colour and current move is not on right perimeter or bottom perimeter
+    if (board.board[botA][rightB] == oppColour){ //if piece on bottom right diagonal is of opposite colour
 
         if (isSandwich(a, b, botA, rightB, playerColour,check) == -1){
 
@@ -167,7 +143,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
     }
 
 
-    if (board.board[a][leftB] == oppColour && !leftPerim){ //if piece on left is of opposite colour and current move is not on left perimeter
+    if (board.board[a][leftB] == oppColour){ //if piece on left is of opposite colour
 
         if (isSandwich(a, b, a, leftB, playerColour,check) == -1){
 
@@ -182,7 +158,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
 
     }
 
-    if (board.board[a][rightB] == oppColour && !rightPerim){ //if piece on right is of opposite colour and current move is not on right perimeter
+    if (board.board[a][rightB] == oppColour){ //if piece on right is of opposite colour
 
         if ( isSandwich(a, b, a, rightB, playerColour,check) == -1){
 
