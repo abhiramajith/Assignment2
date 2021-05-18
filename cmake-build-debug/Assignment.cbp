@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="assignment2"/>
+		<Option title="Assignment"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="assignment2">
-				<Option output="/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/assignment2.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="Assignment">
+				<Option output="/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Assignment.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -49,14 +49,14 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 assignment2"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment"/>
 					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="assignment2/fast">
-				<Option output="/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/assignment2.exe" prefix_auto="0" extension_auto="0"/>
+			<Target title="Assignment/fast">
+				<Option output="/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Assignment.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -67,7 +67,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 assignment2/fast"/>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment/fast"/>
 					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -75,31 +75,31 @@
 			</Target>
 		</Build>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/anyMove.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/endGame.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/gameInfo.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/initialiseGame.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/isSandwich.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/library.h">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/main.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/playerMove.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/validMoveChecker.c">
-			<Option target="assignment2"/>
+			<Option target="Assignment"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Abhiram/C_programs/Assignment/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

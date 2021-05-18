@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-d
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/assignment2.dir/all
+all: CMakeFiles/Assignment.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/assignment2.dir/clean
+clean: CMakeFiles/Assignment.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/assignment2.dir
+# Target rules for target CMakeFiles/Assignment.dir
 
 # All Build rule for target.
-CMakeFiles/assignment2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target assignment2"
-.PHONY : CMakeFiles/assignment2.dir/all
+CMakeFiles/Assignment.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target Assignment"
+.PHONY : CMakeFiles/Assignment.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/assignment2.dir/rule: cmake_check_build_system
+CMakeFiles/Assignment.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/assignment2.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Assignment.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/Abhiram/C_programs/Assignment/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/assignment2.dir/rule
+.PHONY : CMakeFiles/Assignment.dir/rule
 
 # Convenience name for target.
-assignment2: CMakeFiles/assignment2.dir/rule
+Assignment: CMakeFiles/Assignment.dir/rule
 
-.PHONY : assignment2
+.PHONY : Assignment
 
 # clean rule for target.
-CMakeFiles/assignment2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/clean
-.PHONY : CMakeFiles/assignment2.dir/clean
+CMakeFiles/Assignment.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/clean
+.PHONY : CMakeFiles/Assignment.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named assignment2
+# Target rules for targets named Assignment
 
 # Build rule for target.
-assignment2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignment2
-.PHONY : assignment2
+Assignment: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Assignment
+.PHONY : Assignment
 
 # fast build rule for target.
-assignment2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/build
-.PHONY : assignment2/fast
+Assignment/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/build
+.PHONY : Assignment/fast
 
 anyMove.o: anyMove.c.o
 
@@ -149,7 +149,7 @@ anyMove.o: anyMove.c.o
 
 # target to build an object file
 anyMove.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/anyMove.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/anyMove.c.o
 .PHONY : anyMove.c.o
 
 anyMove.i: anyMove.c.i
@@ -158,7 +158,7 @@ anyMove.i: anyMove.c.i
 
 # target to preprocess a source file
 anyMove.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/anyMove.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/anyMove.c.i
 .PHONY : anyMove.c.i
 
 anyMove.s: anyMove.c.s
@@ -167,7 +167,7 @@ anyMove.s: anyMove.c.s
 
 # target to generate assembly for a file
 anyMove.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/anyMove.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/anyMove.c.s
 .PHONY : anyMove.c.s
 
 endGame.o: endGame.c.o
@@ -176,7 +176,7 @@ endGame.o: endGame.c.o
 
 # target to build an object file
 endGame.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/endGame.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/endGame.c.o
 .PHONY : endGame.c.o
 
 endGame.i: endGame.c.i
@@ -185,7 +185,7 @@ endGame.i: endGame.c.i
 
 # target to preprocess a source file
 endGame.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/endGame.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/endGame.c.i
 .PHONY : endGame.c.i
 
 endGame.s: endGame.c.s
@@ -194,7 +194,7 @@ endGame.s: endGame.c.s
 
 # target to generate assembly for a file
 endGame.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/endGame.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/endGame.c.s
 .PHONY : endGame.c.s
 
 gameInfo.o: gameInfo.c.o
@@ -203,7 +203,7 @@ gameInfo.o: gameInfo.c.o
 
 # target to build an object file
 gameInfo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/gameInfo.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/gameInfo.c.o
 .PHONY : gameInfo.c.o
 
 gameInfo.i: gameInfo.c.i
@@ -212,7 +212,7 @@ gameInfo.i: gameInfo.c.i
 
 # target to preprocess a source file
 gameInfo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/gameInfo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/gameInfo.c.i
 .PHONY : gameInfo.c.i
 
 gameInfo.s: gameInfo.c.s
@@ -221,7 +221,7 @@ gameInfo.s: gameInfo.c.s
 
 # target to generate assembly for a file
 gameInfo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/gameInfo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/gameInfo.c.s
 .PHONY : gameInfo.c.s
 
 initialiseGame.o: initialiseGame.c.o
@@ -230,7 +230,7 @@ initialiseGame.o: initialiseGame.c.o
 
 # target to build an object file
 initialiseGame.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/initialiseGame.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/initialiseGame.c.o
 .PHONY : initialiseGame.c.o
 
 initialiseGame.i: initialiseGame.c.i
@@ -239,7 +239,7 @@ initialiseGame.i: initialiseGame.c.i
 
 # target to preprocess a source file
 initialiseGame.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/initialiseGame.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/initialiseGame.c.i
 .PHONY : initialiseGame.c.i
 
 initialiseGame.s: initialiseGame.c.s
@@ -248,7 +248,7 @@ initialiseGame.s: initialiseGame.c.s
 
 # target to generate assembly for a file
 initialiseGame.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/initialiseGame.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/initialiseGame.c.s
 .PHONY : initialiseGame.c.s
 
 isSandwich.o: isSandwich.c.o
@@ -257,7 +257,7 @@ isSandwich.o: isSandwich.c.o
 
 # target to build an object file
 isSandwich.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/isSandwich.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/isSandwich.c.o
 .PHONY : isSandwich.c.o
 
 isSandwich.i: isSandwich.c.i
@@ -266,7 +266,7 @@ isSandwich.i: isSandwich.c.i
 
 # target to preprocess a source file
 isSandwich.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/isSandwich.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/isSandwich.c.i
 .PHONY : isSandwich.c.i
 
 isSandwich.s: isSandwich.c.s
@@ -275,7 +275,7 @@ isSandwich.s: isSandwich.c.s
 
 # target to generate assembly for a file
 isSandwich.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/isSandwich.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/isSandwich.c.s
 .PHONY : isSandwich.c.s
 
 main.o: main.c.o
@@ -284,7 +284,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -293,7 +293,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -302,7 +302,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/main.c.s
 .PHONY : main.c.s
 
 playerMove.o: playerMove.c.o
@@ -311,7 +311,7 @@ playerMove.o: playerMove.c.o
 
 # target to build an object file
 playerMove.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/playerMove.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/playerMove.c.o
 .PHONY : playerMove.c.o
 
 playerMove.i: playerMove.c.i
@@ -320,7 +320,7 @@ playerMove.i: playerMove.c.i
 
 # target to preprocess a source file
 playerMove.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/playerMove.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/playerMove.c.i
 .PHONY : playerMove.c.i
 
 playerMove.s: playerMove.c.s
@@ -329,7 +329,7 @@ playerMove.s: playerMove.c.s
 
 # target to generate assembly for a file
 playerMove.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/playerMove.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/playerMove.c.s
 .PHONY : playerMove.c.s
 
 validMoveChecker.o: validMoveChecker.c.o
@@ -338,7 +338,7 @@ validMoveChecker.o: validMoveChecker.c.o
 
 # target to build an object file
 validMoveChecker.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/validMoveChecker.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/validMoveChecker.c.o
 .PHONY : validMoveChecker.c.o
 
 validMoveChecker.i: validMoveChecker.c.i
@@ -347,7 +347,7 @@ validMoveChecker.i: validMoveChecker.c.i
 
 # target to preprocess a source file
 validMoveChecker.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/validMoveChecker.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/validMoveChecker.c.i
 .PHONY : validMoveChecker.c.i
 
 validMoveChecker.s: validMoveChecker.c.s
@@ -356,7 +356,7 @@ validMoveChecker.s: validMoveChecker.c.s
 
 # target to generate assembly for a file
 validMoveChecker.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assignment2.dir/build.make CMakeFiles/assignment2.dir/validMoveChecker.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment.dir/build.make CMakeFiles/Assignment.dir/validMoveChecker.c.s
 .PHONY : validMoveChecker.c.s
 
 # Help Target
@@ -367,7 +367,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... assignment2"
+	@echo "... Assignment"
 	@echo "... anyMove.o"
 	@echo "... anyMove.i"
 	@echo "... anyMove.s"
