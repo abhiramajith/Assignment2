@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Abhiram/C_programs/Assignment/endGame.c
+library.h
+C:/Users/Abhiram/C_programs/Assignment/library.h
+
 C:/Users/Abhiram/C_programs/Assignment/library.h
 stdio.h
 -
@@ -21,10 +25,6 @@ time.h
 -
 
 C:/Users/Abhiram/C_programs/Assignment/main.c
-library.h
-C:/Users/Abhiram/C_programs/Assignment/library.h
-
-C:/Users/Abhiram/C_programs/Assignment/validMoveChecker.c
 library.h
 C:/Users/Abhiram/C_programs/Assignment/library.h
 

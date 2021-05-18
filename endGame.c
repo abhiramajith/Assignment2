@@ -36,6 +36,7 @@ void gameOver(){
 
     outFile(wincheck, count(colours[0], board), count(colours[1], board)); //Call to outFile to write results of game to text file
 
+    printf("\nThank you for playing!\n\n");
     exit(0); //end program
 
 }

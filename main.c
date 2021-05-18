@@ -17,6 +17,8 @@ int main() {
     board.row = BOARD_SIZE;
     board.col = BOARD_SIZE;
 
+    printf("\n#### Welcome to Othello ####\n\n");
+
     initializeBoard(); //calling function to set up board
 
     assignPlayers(); //Assigning players to colours
@@ -27,9 +29,9 @@ int main() {
 
     while (gameWon != 1){ //While game not won
 
-        if (count(colours[0], board) + count(colours[1], board) == 64){ //if player scores add up to 64 game is over
-            gameOver(); //call to end game and display winners
-        }
+        anyMove(colours[0]); //Checks if there are any valid moves for 'B'
+
+        anyMove(colours[1]); //Checks if there are any valid moves for 'W'
 
         printf("%s's (B) turn\n", Player[0].playerName);
         playerMove(Player[0].playerColour); //calling playerMove with player's colour
