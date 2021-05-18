@@ -33,8 +33,7 @@ In its final form the playerMove takes in a move from the user, which can either
 there is another function called anyMove which will be discussed later that checks if a player has a valid move on the board, in which case they cannot pass.
 
 Once a correct move is entered, it is passed to a function called validMove, which takes in the move coordinates, player's colour and a check number.
-The purpose of the check number is that there are functions in my assignment that require moves to be validated but the board is not to be altered, and it is the check number that signifies if the board is to be modified. The function validMove checks if the move entered is correct in
-the bounds of the board i.e it is in a position greater than or equal to 0 but less than or equal to 7 (index notation) ` if ( (a >= 0) && (a <= 7) && (b >= 0) && (b <= 7)){`.
+The purpose of the check number is that there are functions in my assignment that require moves to be validated but the board is not to be altered, and it is the check number that signifies if the board is to be modified. 
 If the move is in the bounds of the board the function then checks if there is a piece of either colour in the given position or if the function legalMove returns 1.
 `if ((board.board[a][b] == colours[0] || board.board[a][b] == colours[1]) || legalMove(a, b, colour, check) == 1 ) `, if this statement is true validMove returns 1 signifying
 the entered move is not valid and if it is false 0 is returned. In the call to validMove from playerMove if 1 is returned by validMove the player is informed their move is
