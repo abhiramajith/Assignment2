@@ -12,12 +12,14 @@ void printBoard(Game_Board Board) {
     printf("  a b c d e f g h \n"); //Top Label for columns of board
 
     for (row = 0; row < board.row; row++) {//for loop for rows of board
+
         printf("%d ", row + 1); //Printing row number at start of row
 
         for (col = 0; col < Board.col; col++) {
 
             printf("%c ", Board.board[row][col]); //Printing out the symbol at each location of the board
         }
+
         printf("%d ", row + 1); //Printing the row number at the end of the row
 
         printf("\n");
@@ -37,6 +39,7 @@ int count(char colour, Game_Board Board){
         for (col = 0; col < Board.col; col++) {
 
             if (Board.board[row][col] == colour) { //If a piece of the given colour is found increment the count
+
                 count++;
             }
 

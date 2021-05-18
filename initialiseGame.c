@@ -16,7 +16,6 @@ int assignPlayers(void){
 
 
     Player[0].playerColour = colours[0];
-
     Player[1].playerColour = colours[1];
 
     printf("%s is black \n", Player[0].playerName);
@@ -29,7 +28,6 @@ int assignPlayers(void){
 //This function sets up the board before the game starts
 int initializeBoard()
 {
-
     for (row = 0; row < board.row; row++) //For loop for board rows
     {
         for (col = 0; col < board.col; col++)// For loop for board columns
@@ -42,7 +40,6 @@ int initializeBoard()
             board.board[4][3] = colours[0];
             board.board[4][4] = colours[1];
         }
-
 
     }
 
