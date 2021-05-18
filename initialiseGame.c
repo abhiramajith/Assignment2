@@ -18,10 +18,10 @@ int assignPlayers(void){
     Player[0].playerColour = colours[0];
     Player[1].playerColour = colours[1];
 
-    printf("%s is black \n", Player[0].playerName);
+    printf("\n%s is black \n", Player[0].playerName);
     printf("%s is white \n", Player[1].playerName);
 
-    printf("%s plays first as they control black.\n", Player[0].playerName);
+    printf("\n%s plays first as they control black.\n", Player[0].playerName);
     return 0;
 }
 
