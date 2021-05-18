@@ -172,7 +172,7 @@ int legalMove(int a, int b, unsigned char colour, int check){
             isSand = false;
         }
 
-        else{ //there is another piece of the player's colour sandwiching the opponents pieces to right of current move
+        else{ //There is another piece of the player's colour sandwiching the opponents pieces to right of current move
             oppAdj = true;
             isSand = true;
         }
