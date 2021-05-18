@@ -5,7 +5,8 @@
  * otherwise outFile will not be able to write to "othello-results.txt*/
 
 //Declaring global variables so they are recognised in other source files
-int row = 0, col = 0;
+
+int row = 0, col = 0; //iterators
 int gameWon = 0; //signifies if the game has been won
 bool bValidmove = true; //holds whether there exists valid move for black
 bool wValidmove = true; //holds whether there exists valid move for white

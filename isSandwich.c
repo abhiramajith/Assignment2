@@ -25,9 +25,11 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
     //assigning correct player colour to playerColour
     if (colour == colours[0]) {
+
         playerColour = colours[0];
     }
     else{
+
         playerColour = colours[1];
     }
 
@@ -69,7 +71,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
                 //isSandwich is set to true as there is a player piece sandwiching the opponent pieces with the current move
                 isSandwich = true;
 
-                goto flip; /* goto line 460 as now isSandwich is true so opponent pieces can be flipped to players colour */
+                goto flip; /* goto line 37 as now isSandwich is true so opponent pieces can be flipped to players colour */
 
             }
 
@@ -113,7 +115,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
                 isSandwich = true;
 
-                goto flip2; //goto line 507 so pieces can be flipped to player's colours
+                goto flip2; //goto line 84 so pieces can be flipped to player's colours
 
             }
         }
@@ -154,7 +156,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
 
                 isSandwich = true;
 
-                goto flip3; //goto line 552
+                goto flip3; //goto line 128
             }
         }
         return -1; //No sandwich is found
@@ -193,7 +195,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
             if (board.board[c][i] == playerColour && !isSandwich){
 
                 isSandwich = true;
-                goto flip4; //goto line 591
+                goto flip4; //goto line 167
             }
         }
 
@@ -241,7 +243,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
             if (board.board[i][j] == playerColour && !isSandwich){
 
                 isSandwich = true;
-                goto flip5; //goto line 633
+                goto flip5; //goto line 209
             }
         }
 
@@ -287,7 +289,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
             if (board.board[i][j] == playerColour && !isSandwich){
 
                 isSandwich = true;
-                goto flip6; //goto line 680
+                goto flip6; //goto line 256
             }
         }
 
@@ -334,7 +336,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
             if (board.board[i][j] == playerColour && !isSandwich){
 
                 isSandwich = true;
-                goto flip7; //goto line 727
+                goto flip7; //goto line 303
             }
         }
 
@@ -383,7 +385,7 @@ int isSandwich(int a, int b, int c, int d, unsigned char colour, int check){
             if (board.board[i][j] == playerColour && !isSandwich){
 
                 isSandwich = true;
-                goto flip8;
+                goto flip8; //goto line 350
             }
         }
 

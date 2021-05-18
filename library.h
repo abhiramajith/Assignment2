@@ -28,10 +28,10 @@ player Player[STRUCT_SIZE]; //defining as array to store for 2 diff players
 //Struct to hold game board
 typedef struct game_board
 {
-    unsigned char board[BOARD_SIZE][BOARD_SIZE];
-    int row;
-    int col;
-    char symbol;
+    unsigned char board[BOARD_SIZE][BOARD_SIZE]; //Holds actual game board
+    int row; //num of rows
+    int col; //num of columns
+    char symbol; //symbol for empty space
 }Game_Board;
 
 Game_Board board; //Declaring synonym as global variable so board can be referenced and altered in any function

@@ -37,6 +37,7 @@ void gameOver(){
     outFile(wincheck, count(colours[0], board), count(colours[1], board)); //Call to outFile to write results of game to text file
 
     printf("\nThank you for playing!\n\n");
+
     exit(0); //end program
 
 }
@@ -51,7 +52,6 @@ void outFile(int winCheck, int score0, int score1){
 
         //ab+ opens a binary file in append mode, results will be continually added to same file
         printf("Could not open file.\n");
-
     }
 
     else{

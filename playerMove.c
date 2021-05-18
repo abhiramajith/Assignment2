@@ -19,7 +19,6 @@ int playerMove(unsigned char colour){
 
         printf("\nYou have no valid moves! Enter p to pass\n");
         moveExists = false; //Set to false as there is no move to make
-
     }
 
     printf("\nEnter the coordinates of the move you would like to make (e.g a7)\n"
@@ -30,11 +29,13 @@ int playerMove(unsigned char colour){
     if (xL == 'p') { //If the user enters p for pass
 
         if (moveExists) { //if there is a move they can make
+
             printf("\nThere is still a move you can make you cannot pass\n");
             goto newMove; //Choose a newmove
         }
 
         else{
+
             printf("Passing your turn to the opponent\n");
             return 0;
         }
@@ -42,6 +43,7 @@ int playerMove(unsigned char colour){
     }
 
     else if (xL < 'a' || xL > 'h' || isdigit(xL)){ //If xL is not a letter between a and h or it is a number
+
         printf("\nInvalid move please enter a letter between a and h followed by a number between 1 and 8\n");
         getchar(); //Removes space from previous scanf
         goto newMove; //Choose a newmove
@@ -51,6 +53,7 @@ int playerMove(unsigned char colour){
     scanf("%d", &y); //Scan in y (row of move)
 
     if (y < 1 || y > 8 || isalpha(y)){ //if y is less than 1 or greater than 8 or if it is a letter choose new move
+
         printf("\nInvalid move please enter a letter between a and f followed by a number between 1 and 8\n");
         goto newMove;
     }
@@ -68,7 +71,6 @@ int playerMove(unsigned char colour){
 
         printf("\nThe move entered was either invalid or illegal please try again\n");
         goto newMove;
-
     }
 
     board.board[x][y] = colour; //Placing player's colour marker in move location they gave

@@ -45,10 +45,12 @@ int anyMove(unsigned char colour){
     //if no valid move is found set appropriate variable to false
 
     if(colour == colours[0]){
+
         bValidmove = false;
     }
 
     else if (colour == colours[1]){
+
         wValidmove = false;
     }
 
