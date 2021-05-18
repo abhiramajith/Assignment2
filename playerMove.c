@@ -9,8 +9,8 @@ int playerMove(unsigned char colour){
 
     bool moveExists = true; //Holds truth value for if a move exists
 
-    char xL; //Holds letter values for x axis of board
-    int y; //Holds numbers of y axis of board
+    char xL; //Holds letter values for column of board
+    int y; //Holds numbers of row of board
 
     //Label for when a new move must be chosen
     newMove:
