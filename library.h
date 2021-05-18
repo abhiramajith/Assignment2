@@ -36,7 +36,7 @@ typedef struct game_board
 
 Game_Board board; //Declaring synonym as global variable so board can be referenced and altered in any function
 
-//Initialising global variables
+//Global variables initialised here so they can be used in other source files
 int row , col ;
 int gameWon ; //signifies if the game has been won
 bool bValidmove; //holds whether there exists valid move for black

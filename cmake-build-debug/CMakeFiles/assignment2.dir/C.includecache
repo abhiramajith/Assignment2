@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Abhiram/C_programs/Assignment/anyMove.c
+library.h
+C:/Users/Abhiram/C_programs/Assignment/library.h
+
 C:/Users/Abhiram/C_programs/Assignment/endGame.c
+library.h
+C:/Users/Abhiram/C_programs/Assignment/library.h
+
+C:/Users/Abhiram/C_programs/Assignment/gameInfo.c
+library.h
+C:/Users/Abhiram/C_programs/Assignment/library.h
+
+C:/Users/Abhiram/C_programs/Assignment/initialiseGame.c
+library.h
+C:/Users/Abhiram/C_programs/Assignment/library.h
+
+C:/Users/Abhiram/C_programs/Assignment/isSandwich.c
 library.h
 C:/Users/Abhiram/C_programs/Assignment/library.h
 
@@ -25,6 +41,14 @@ time.h
 -
 
 C:/Users/Abhiram/C_programs/Assignment/main.c
+library.h
+C:/Users/Abhiram/C_programs/Assignment/library.h
+
+C:/Users/Abhiram/C_programs/Assignment/playerMove.c
+library.h
+C:/Users/Abhiram/C_programs/Assignment/library.h
+
+C:/Users/Abhiram/C_programs/Assignment/validMoveChecker.c
 library.h
 C:/Users/Abhiram/C_programs/Assignment/library.h
 
